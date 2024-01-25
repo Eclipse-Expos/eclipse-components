@@ -4,7 +4,7 @@ The Official Eclipse Expos Component Library
 
 
 ## Installing
-```
+```c
 # Create a .npmrc file (ONLY IF IT DOESN'T EXIST ALREADY)
 $ touch .npmrc
 
