@@ -4,9 +4,10 @@ The Official Eclipse Expos Component Library
 
 
 ## Installing
-
 ```
-npm install @realtristan/components.eclipseexpos
+$ touch .npmrc
+$ echo "@realtristan:registry=https://npm.pkg.github.com" > .npmrc
+$ npm install @realtristan/components.eclipseexpos
 ```
 
 ## Publishing the Library (For Eclipse Expos Admin)
