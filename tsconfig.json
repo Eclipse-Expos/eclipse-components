@@ -1,6 +1,12 @@
 {
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "example"],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "example",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx",
+  ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
@@ -16,7 +22,7 @@
     "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     "lib": [
       "dom",
-      "esnext"
+      "esnext",
     ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
     "jsx": "react" /* Specify what JSX code is generated. */,
     // "experimentalDecorators": true,                   /* Enable experimental support for legacy experimental decorators. */
@@ -75,7 +81,7 @@
     // "noEmitHelpers": true,                            /* Disable generating custom helper functions like '__extends' in compiled output. */
     // "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
     // "preserveConstEnums": true,                       /* Disable erasing 'const enum' declarations in generated code. */
-    // "declarationDir": "./",                           /* Specify the output directory for generated declaration files. */
+    "declarationDir": "types" /* Specify the output directory for generated declaration files. */,
     // "preserveValueImports": true,                     /* Preserve unused imported values in the JavaScript output that would otherwise be removed. */
 
     /* Interop Constraints */
@@ -109,6 +115,6 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */
-  }
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+  },
 }

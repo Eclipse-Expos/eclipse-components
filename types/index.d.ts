@@ -7,20 +7,11 @@
  * The tutorial for the component library is here:
  *    https://www.airplane.dev/blog/how-to-build-a-react-component-library
  */
-
 /**
  * Import the styles to enable tailwind classes in the consuming application.
  */
-import "./styles.module.css"
-
+import "./styles/styles.module.css";
 /**
  * Export all of the components that will be available to the consuming application.
  */
-export function Card({ title, children }: CardProps): JSX.Element {
-  return (
-    <div className="w-full h-full">
-      <h1 className="font-bold text-2xl">{title}</h1>
-      <div className="mt-4">{children}</div>
-    </div>
-  )
-}
+export * from "./components";

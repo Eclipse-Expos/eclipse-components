@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@realtristan/components.eclipseexpos": "^0.0.102",
+    "@realtristan/components.eclipseexpos": "^0.0.103",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"
