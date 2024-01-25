@@ -2,17 +2,19 @@
 
 The Official Eclipse Expos Component Library
 
-
 ## Installing
+
 ### Initializing package registry
+
 ```
 $ touch .npmrc
 $ echo "@realtristan:registry=https://npm.pkg.github.com" > .npmrc
 ```
 
 ### Install the component package
+
 ```
-$ npm install @realtristan/components.eclipseexpos
+$ npm install @realtristan/components-eclipseexpos
 ```
 
 ## Publishing the Library (For Eclipse Expos Admin)

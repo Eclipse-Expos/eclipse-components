@@ -1,4 +1,4 @@
-name: package-components.eclipseexpos
+name: package-components-eclipseexpos
 
 on:
   release:
