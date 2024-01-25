@@ -4,7 +4,7 @@
   "publishConfig": {
     "@realtristan:registry": "https://npm.pkg.github.com"
   },
-  "version": "0.0.001",
+  "version": "0.0.003",
   "description": "Component Library for Eclipse Expos",
   "type": "module",
   "main": "dist/cjs/index.js",
