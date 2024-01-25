@@ -7,6 +7,7 @@
   "version": "0.0.100",
   "description": "Component Library for Eclipse Expos",
   "types": "dist/index.d.ts",
+  "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -30,5 +31,8 @@
   },
   "peerDependencies": {
     "react": "^18.2.0"
+  },
+  "dependencies": {
+    "prettier": "^3.2.4"
   }
 }

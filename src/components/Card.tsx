@@ -7,9 +7,9 @@ interface CardProps {
 
 export default function Card({ title, children }: CardProps) {
   return (
-    <div className='w-full h-full'>
-      <h1 className='font-bold text-2xl'>{title}</h1>
-      <div className='mt-4'>{children}</div>
+    <div className="w-full h-full">
+      <h1 className="font-bold text-2xl">{title}</h1>
+      <div className="mt-4">{children}</div>
     </div>
   )
 }
