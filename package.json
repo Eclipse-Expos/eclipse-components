@@ -5,8 +5,8 @@
     "@realtristan:registry": "https://npm.pkg.github.com"
   },
   "private": false,
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Component Library for Eclipse Expos",
   "main": "dist/index.umd.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
