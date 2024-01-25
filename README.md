@@ -1,6 +1,15 @@
-# Component Library
+# Eclipse Expos Component Library
 
-## Publishing the Library
+The Official Eclipse Expos Component Library
+
+
+## Installing
+
+```
+npm install @realtristan/components.eclipseexpos
+```
+
+## Publishing the Library (For Eclipse Expos Admin)
 
 1. Create an npm account for eclipse expos
 
