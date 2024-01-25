@@ -4,13 +4,12 @@
   "publishConfig": {
     "@realtristan:registry": "https://npm.pkg.github.com"
   },
-  "version": "0.0.101",
+  "version": "0.0.102",
   "description": "Component Library for Eclipse Expos",
-  "types": "dist/index.d.ts",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.modern.js",
-  "source": "src/index.tsx",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "engines": {
     "node": ">=10"
   },
