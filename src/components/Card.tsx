@@ -5,7 +5,7 @@ interface CardProps {
   children: ReactNode
 }
 
-export default function Card({ title, children }: CardProps) {
+export default function Card({ title, children }: CardProps): JSX.Element {
   return (
     <div className="w-full h-full">
       <h1 className="font-bold text-2xl">{title}</h1>

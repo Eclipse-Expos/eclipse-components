@@ -4,7 +4,7 @@
   "publishConfig": {
     "@realtristan:registry": "https://npm.pkg.github.com"
   },
-  "version": "0.0.102",
+  "version": "0.0.103",
   "description": "Component Library for Eclipse Expos",
   "type": "module",
   "main": "dist/index.umd.js",

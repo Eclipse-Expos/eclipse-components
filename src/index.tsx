@@ -16,4 +16,11 @@ import "./styles.module.css"
 /**
  * Export all of the components that will be available to the consuming application.
  */
-export * from "./components/Card"
+export function Card({ title, children }: CardProps): JSX.Element {
+  return (
+    <div className="w-full h-full">
+      <h1 className="font-bold text-2xl">{title}</h1>
+      <div className="mt-4">{children}</div>
+    </div>
+  )
+}
