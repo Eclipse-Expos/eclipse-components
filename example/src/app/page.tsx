@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Card } from "@realtristan/components.eclipseexpos"
+import Image from "next/image";
+import { Card } from "@realtristan/components-eclipseexpos";
 
 export default function Home() {
   return (
@@ -119,5 +119,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
