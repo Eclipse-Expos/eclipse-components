@@ -4,21 +4,23 @@
   "publishConfig": {
     "@realtristan:registry": "https://npm.pkg.github.com"
   },
-  "private": false,
   "version": "0.0.100",
   "description": "Component Library for Eclipse Expos",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.tsx",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "vite build && tsc"
+  },
   "files": [
     "dist"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build && tsc"
-  },
-  "author": "",
-  "license": "ISC",
+  "author": "Eclipse Expos",
+  "license": "MIT",
   "devDependencies": {
     "@types/react": "^18.2.48",
     "react": "^18.2.0",

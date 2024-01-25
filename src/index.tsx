@@ -9,6 +9,11 @@
  */
 
 /**
+ * Import the styles to enable tailwind classes in the consuming application.
+ */
+import "./styles.module.css"
+
+/**
  * Export all of the components that will be available to the consuming application.
  */
-export * from "./Card";
+export * from "./components/Card"
