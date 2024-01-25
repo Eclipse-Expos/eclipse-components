@@ -4,14 +4,14 @@ The Official Eclipse Expos Component Library
 
 
 ## Installing
-```c
-# Create a .npmrc file (ONLY IF IT DOESN'T EXIST ALREADY)
+### Initializing package registry
+```
 $ touch .npmrc
-
-# Copy the package registry into the .npmrc file
 $ echo "@realtristan:registry=https://npm.pkg.github.com" > .npmrc
+```
 
-# Install the component package
+### Install the component package
+```
 $ npm install @realtristan/components.eclipseexpos
 ```
 
