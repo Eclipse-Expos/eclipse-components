@@ -1,6 +1,6 @@
 {
   "name": "eclipse-components",
-  "version": "0.0.105",
+  "version": "0.0.114",
   "description": "Eclipse Expositions Component Library",
   "main": "dist/cjs/index.js",
   "repository": {
@@ -12,8 +12,7 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "rollup": "rollup -c --bundleConfigAsCjs",
-    "publish": "npm run rollup && npm publish"
+    "rollup": "rollup -c --bundleConfigAsCjs"
   },
   "author": "Eclipse Expositions",
   "license": "MIT",
@@ -31,9 +30,9 @@
     "prettier": "^3.2.4",
     "react": "^18.2.0",
     "rollup": "^3.29.4",
-    "rollup-plugin-dts": "^5.3.1",
     "rollup-plugin-import-css": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.4.1",
     "tslib": "^2.6.0",

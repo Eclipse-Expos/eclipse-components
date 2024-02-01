@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+    },
     "target": "ESNext",
     "module": "ESNext",
     "esModuleInterop": true,
@@ -15,7 +19,6 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
-    "baseUrl": "src",
   },
   "include": ["src"],
 }

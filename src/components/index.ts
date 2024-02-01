@@ -1,4 +1,9 @@
 /**
+ * Import the styles for the components
+ */
+import "../index.css";
+
+/**
  * Export the InputField Component
  *
  * This is so that we can import the InputField component from the components folder

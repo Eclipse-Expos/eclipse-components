@@ -1,17 +1,19 @@
 /**
- * Library Imports
- *
- * We use the 'cn' function for merging component classNames
+ * Import React and the required types from React.
  */
 import React, {
   ChangeEvent,
   FC,
   useState,
   JSX,
-  ReactNode,
+  // ReactNode,
   InputHTMLAttributes,
 } from "react";
-import { cn } from "lib/utilts/cn";
+
+/**
+ * Import the 'cn' utility function to merge component classnames
+ */
+import { cn } from "@/lib/utilts/cn";
 
 /**
  * Default Props Values for the Input Field
@@ -52,14 +54,6 @@ type InputFieldProps = {
    */
   placeholder?: string;
   /**
-   * When the input field is accessed and changed, this function is called.
-   *
-   * The change event is accessible through the function. Before the passed
-   * onChange function is called, the value state (in the component) is updated.
-   */
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
-
-  /**
    * The input field children
    *
    * This is used to pass children to the input field component.
@@ -67,7 +61,7 @@ type InputFieldProps = {
    * This feature currently is not used.
    */
   // children?: ReactNode;
-} & InputHTMLAttributes<HTMLInputElement>;
+};
 
 /**
  * Eclipse Input Field Component
@@ -78,7 +72,9 @@ type InputFieldProps = {
  * @param palceholder -- The custom placeholder for the input field
  * @returns JSX.Element
  */
-const InputField: FC<InputFieldProps> = (props): JSX.Element => {
+const InputField: FC<
+  InputFieldProps & InputHTMLAttributes<HTMLInputElement>
+> = (props): JSX.Element => {
   /**
    * Manage the value state.
    */
@@ -110,7 +106,8 @@ const InputField: FC<InputFieldProps> = (props): JSX.Element => {
         className="peer w-full rounded-none border-2 border-primary bg-background p-3 font-sans font-light text-primary outline-none transition-all duration-200 ease-out placeholder:opacity-50 focus:border-primary disabled:opacity-50"
         value={value}
         onChange={onChange}
-        {...props}
+        placeholder="" // No placeholder. We use a span for this.
+        disabled={props.disabled}
       />
 
       {/**

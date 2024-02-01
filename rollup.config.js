@@ -1,17 +1,23 @@
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
-import dts from "rollup-plugin-dts";
-import css from "rollup-plugin-import-css";
-
-//NEW
+import postcss from "rollup-plugin-postcss";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
-
+import tailwindcss from "tailwindcss";
+/**
+ * ES Module imports
+ */
+const autoprefixer = require("autoprefixer");
+const tailwindConfig = require("./tailwind.config.cjs");
 const packageJson = require("./package.json");
 
+/**
+ * Default export
+ */
 export default [
   {
+    external: ["react", "react-dom"],
     input: "src/index.ts",
     output: [
       {
@@ -21,24 +27,23 @@ export default [
       },
     ],
     plugins: [
-      // Required for Tailwind CSS
-      css(),
+      postcss({
+        config: {
+          path: "./postcss.config.cjs",
+        },
+        extract: true,
+        inject: true,
+        extensions: [".css"],
+        plugins: [autoprefixer(), tailwindcss(tailwindConfig)],
+      }),
 
-      // NEW
       typescript(),
       peerDepsExternal(),
 
       resolve(),
       commonjs(),
 
-      // NEW
       terser(),
     ],
-  },
-  {
-    input: "dist/cjs/types/src/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "esm" }],
-    plugins: [dts.default()],
-    external: [/\.css$/],
   },
 ];

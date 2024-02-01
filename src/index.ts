@@ -1,9 +1,7 @@
 /**
- * Import the styles
- *
- * 1) Tailwind CSS Styling
+ * Import the styles for the library
  */
-import "./styles/tailwind.css";
+import "./index.css";
 
 /**
  * Export all components -- these will be accessible by the consuming application

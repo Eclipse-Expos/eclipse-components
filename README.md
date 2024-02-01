@@ -23,5 +23,6 @@ InputField.tsx
 To publish an updated version of the library, run the following command:
 
 ```
-npm run publish
+npm run rollup
+npm publish
 ```
