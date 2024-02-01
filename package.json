@@ -1,6 +1,6 @@
 {
   "name": "eclipse-components",
-  "version": "0.0.103",
+  "version": "0.0.105",
   "description": "Eclipse Expositions Component Library",
   "main": "dist/cjs/index.js",
   "repository": {
@@ -32,6 +32,7 @@
     "react": "^18.2.0",
     "rollup": "^3.29.4",
     "rollup-plugin-dts": "^5.3.1",
+    "rollup-plugin-import-css": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.4.1",
