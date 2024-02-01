@@ -3,37 +3,63 @@
  *
  * We use the 'cn' function for merging component classNames
  */
-import React, { ChangeEvent, FC, useState, JSX } from "react";
+import React, { ChangeEvent, FC, useState, JSX, ReactNode } from "react";
 import { cn } from "lib/utilts/cn";
 
 /**
  * Default Props Values for the Input Field
+ *
+ * We use these in the case that the provided props are empty.
  */
 const DEFAULT_PROPS = {
   className: "",
   defaultValue: "",
+  placeholder: "",
 };
 
 /**
  * Input Field Props
+ *
+ * These are used to define the props for the input field component.
  */
 type InputFieldProps = {
   /**
-   * The input field type.
+   * The input field custom className.
+   *
+   * This value can be empty. If it is, then the default className of (empty string)
+   * will be assigned. The provided className is merged with the current: "relative".
    */
   className?: string;
   /**
    * The input field default value.
+   *
+   * This value can be empty. If it is, then the default value of (empty string)
+   * will be assigned.
    */
   defaultValue?: string;
   /**
+   * The input field placeholder.
+   *
+   * This value can be empty. If it is, then the default placeholder of (empty string)
+   * will be assigned.
+   */
+  placeholder?: string;
+  /**
    * When the input field is accessed and changed, this function is called.
+   *
+   * The change event is accessible through the function. Before the passed
+   * onChange function is called, the value state (in the component) is updated.
    */
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+
   /**
-   * The input field placeholder.
+   * The input field children
+   *
+   * This is used to pass children to the input field component.
+   *
+   * This feature currently is not used.
    */
-  placeholder: string;
+  // children?: ReactNode;
 };
 
 /**
@@ -69,7 +95,7 @@ const InputField: FC<InputFieldProps> = (props): JSX.Element => {
    * Wrap the content in a relative div first.
    */
   return (
-    <div className={cn("group relative", props.className)}>
+    <div className={cn("relative", props.className)}>
       {/**
        * The actual input field.
        */}
