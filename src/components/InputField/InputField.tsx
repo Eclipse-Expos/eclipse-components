@@ -3,7 +3,14 @@
  *
  * We use the 'cn' function for merging component classNames
  */
-import React, { ChangeEvent, FC, useState, JSX, ReactNode } from "react";
+import React, {
+  ChangeEvent,
+  FC,
+  useState,
+  JSX,
+  ReactNode,
+  InputHTMLAttributes,
+} from "react";
 import { cn } from "lib/utilts/cn";
 
 /**
@@ -60,7 +67,7 @@ type InputFieldProps = {
    * This feature currently is not used.
    */
   // children?: ReactNode;
-};
+} & InputHTMLAttributes<HTMLInputElement>;
 
 /**
  * Eclipse Input Field Component
