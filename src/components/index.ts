@@ -4,9 +4,7 @@
 import "../index.css";
 
 /**
- * Export the InputField Component
- *
- * This is so that we can import the InputField component from the components folder
- * without having to know the exact file name.
+ * Export the components
  */
 export { default as InputField } from "./InputField";
+export { default as ClientWrapper } from "./ClientWrapper";
