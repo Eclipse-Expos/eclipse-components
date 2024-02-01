@@ -66,10 +66,6 @@ type InputFieldProps = {
 /**
  * Eclipse Input Field Component
  *
- * @param props.className -- The custom classname for the input field
- * @param props.defaultValue -- The default value for the input field. (None: "")
- * @param props.onChange -- When the input field is accessed and changed, this function is called
- * @param palceholder -- The custom placeholder for the input field
  * @returns JSX.Element
  */
 const InputField: FC<
