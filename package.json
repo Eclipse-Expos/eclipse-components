@@ -3,7 +3,10 @@
   "version": "0.0.102",
   "description": "Eclipse Expositions Component Library",
   "main": "dist/cjs/index.js",
-  "repository": "https://github.com/Eclipse-Expos/eclipse-components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eclipse-Expos/eclipse-components.git"
+  },
   "files": [
     "dist"
   ],
