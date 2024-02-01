@@ -1,9 +1,4 @@
 /**
- * Having the "use client" causes a warning with rollup -- it's then ignored anyway.
- */
-//"use client";
-
-/**
  * Import React and the required types from React.
  */
 import React, {
@@ -76,6 +71,11 @@ type InputFieldProps = {
 const InputField: FC<
   InputFieldProps & InputHTMLAttributes<HTMLInputElement>
 > = (props): JSX.Element => {
+  /**
+   * Set to client
+   */
+  "use client";
+
   /**
    * Manage the value state.
    */
