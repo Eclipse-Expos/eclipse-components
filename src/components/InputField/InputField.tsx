@@ -45,7 +45,7 @@ type InputFieldProps = {
  * @param props.defaultValue -- The default value for the input field. (None: "")
  * @param props.onChange -- When the input field is accessed and changed, this function is called
  * @param palceholder -- The custom placeholder for the input field
- * @returns
+ * @returns JSX.Element
  */
 const InputField: FC<InputFieldProps> = (props): JSX.Element => {
   /**
