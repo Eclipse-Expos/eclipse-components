@@ -1,6 +1,6 @@
 {
   "name": "eclipse-components",
-  "version": "0.0.101",
+  "version": "0.0.102",
   "description": "Eclipse Expositions Component Library",
   "main": "dist/cjs/index.js",
   "repository": "https://github.com/Eclipse-Expos/eclipse-components",
@@ -9,7 +9,8 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "rollup": "rollup -c --bundleConfigAsCjs"
+    "rollup": "rollup -c --bundleConfigAsCjs",
+    "publish": "npm run rollup && npm publish"
   },
   "author": "Eclipse Expositions",
   "license": "MIT",

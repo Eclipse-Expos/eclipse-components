@@ -12,8 +12,16 @@ npm i eclipse-components
 
 ## Components
 
-The following are components of the library
+The following are components apart of the library:
 
 ```
 InputField.tsx
+```
+
+## Versioning
+
+To publish an updated version of the library, run the following command:
+
+```
+npm run publish
 ```
