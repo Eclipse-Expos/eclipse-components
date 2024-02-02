@@ -1,6 +1,6 @@
 {
   "name": "eclipse-components",
-  "version": "0.0.114",
+  "version": "0.0.118",
   "description": "Eclipse Expositions Component Library",
   "main": "dist/cjs/index.js",
   "repository": {
