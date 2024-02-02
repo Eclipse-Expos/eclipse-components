@@ -2,7 +2,8 @@
 
 import MainWrapper from "@/components/MainWrapper";
 import StarBackground from "@/components/StarBackground";
-import { Button, EclipseLogoLong, InputField } from "../../../../src/index";
+// @ts-ignore
+import { Button, EclipseLogoLong, InputField } from "eclipse-components";
 
 export default function Home() {
   return (
