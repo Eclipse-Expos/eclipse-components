@@ -3,18 +3,6 @@ import { cn } from "@/lib/utils/cn";
 import { CustomTextAreaProps, TextAreaProps } from "./TextArea.types";
 
 /**
- * Ignored Text Area Props
- *
- * These are the props that are ignored when passed to the text area.
- */
-const IGNORED_TEXTAREA_PROPS = [
-  "className",
-  "placeholder",
-  "value",
-  "onChange",
-];
-
-/**
  * Eclipse Text Area Component
  *
  * @returns JSX.Element
@@ -34,17 +22,6 @@ const TextArea: FC<CustomTextAreaProps & TextAreaProps> = (
    */
   const [value, setValue] = useState<string>(
     props.value || props.defaultValue || "",
-  );
-
-  /**
-   * Filter the props to remove the ignored props.
-   *
-   * This is done to prevent the ignored props from being passed to the text area.
-   */
-  const FILTERED_PROPS = Object.fromEntries(
-    Object.entries(props).filter(
-      ([key]) => !IGNORED_TEXTAREA_PROPS.includes(key),
-    ),
   );
 
   /**
@@ -69,11 +46,11 @@ const TextArea: FC<CustomTextAreaProps & TextAreaProps> = (
        * The actual text area.
        */}
       <textarea
+        {...props}
         className="peer w-full inline-block rounded-none border-2 border-primary bg-background p-3 font-sans font-light text-primary outline-none transition-all duration-200 ease-out placeholder:opacity-50 focus:border-primary disabled:opacity-50"
         placeholder="" // No placeholder. We use a span for this.
         value={value}
         onChange={onChange}
-        {...FILTERED_PROPS}
       />
 
       {/**

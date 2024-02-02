@@ -9,7 +9,7 @@ import React, { FC, JSX } from "react";
  */
 const Checkbox: FC<CheckboxProps> = (props): JSX.Element => {
   return (
-    <CB {...props} radius="none">
+    <CB radius="none" {...props}>
       {props.children}
     </CB>
   );

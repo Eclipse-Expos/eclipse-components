@@ -3,20 +3,19 @@ import { cn } from "@/lib/utils/cn";
 import { CustomInputProps, InputProps } from "./InputField.types";
 
 /**
- * Ignored Input Props
- *
- * These are the props that are ignored when passed to the input field.
- */
-const IGNORED_INPUT_PROPS = ["className", "placeholder", "value", "onChange"];
-
-/**
  * Eclipse Input Field Component
+ *
+ * To convert the input to a date picker, use the following:
+ * type="date"
+ *
+ * To convert the input to a file input, use the following:
+ * type="file"
  *
  * @returns JSX.Element
  */
 const InputField: FC<CustomInputProps & InputProps> = (props): JSX.Element => {
   /**
-   * Set to client side rendering
+   * Set the component to client side rendering
    */
   "use client";
 
@@ -25,15 +24,6 @@ const InputField: FC<CustomInputProps & InputProps> = (props): JSX.Element => {
    */
   const [value, setValue] = useState<string>(
     props.value || props.defaultValue || "",
-  );
-
-  /**
-   * Filter the props to remove the ignored props.
-   *
-   * This is done to prevent the ignored props from being passed to the input field.
-   */
-  const FILTERED_PROPS = Object.fromEntries(
-    Object.entries(props).filter(([key]) => !IGNORED_INPUT_PROPS.includes(key)),
   );
 
   /**
@@ -58,11 +48,11 @@ const InputField: FC<CustomInputProps & InputProps> = (props): JSX.Element => {
        * The actual input field.
        */}
       <input
+        {...props}
         className="peer w-full rounded-none border-2 border-primary bg-background p-3 font-sans font-light text-primary outline-none transition-all duration-200 ease-out placeholder:opacity-50 focus:border-primary disabled:opacity-50"
         placeholder="" // No placeholder. We use a span for this.
         value={value}
         onChange={onChange}
-        {...FILTERED_PROPS}
       />
 
       {/**
