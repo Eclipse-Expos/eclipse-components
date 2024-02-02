@@ -10,4 +10,5 @@ export { default as InputField } from "./InputField";
 export { default as TextArea } from "./TextArea";
 export { default as EclipseLogoLong } from "./EclipseLogoLong";
 export { default as Button } from "./Button";
+export { default as Checkbox } from "./Checkbox";
 export { default as ClientWrapper } from "./ClientWrapper";
