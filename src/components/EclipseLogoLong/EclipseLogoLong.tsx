@@ -1,26 +1,45 @@
 import { cn } from "@/lib/utils/cn";
-import React, { FC, JSX } from "react";
+import React, { FC, JSX, SVGAttributes } from "react";
 
 /**
  * Custom SVG Props
  */
-interface SVGProps {
+type SVGProps = SVGAttributes<HTMLOrSVGElement>;
+interface CustomSVGProps {
   className?: string;
 }
+
+/**
+ * Ignore the following props
+ */
+const IGNORED_SVG_PROPS = ["className"];
 
 /**
  * Eclipse Logo Long Component
  *
  * @returns JSX.Element
  */
-const EclipseLogoLong: FC<SVGProps> = (props): JSX.Element => {
+const EclipseLogoLong: FC<SVGProps & CustomSVGProps> = (props): JSX.Element => {
+  /**
+   * Filter the props to remove the ignored props.
+   *
+   * This is done to prevent the ignored props from being passed to the svg.
+   */
+  const FILTERED_PROPS = Object.fromEntries(
+    Object.entries(props).filter(([key]) => !IGNORED_SVG_PROPS.includes(key)),
+  );
+
+  /**
+   * Return the Eclipse Logo Long component JSX
+   */
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={1080}
       height={250}
       viewBox="0 0 1080 400"
-      className={cn("relative z-50 fill-white", props.className)}
+      className={cn("relative fill-white", props.className)}
+      {...FILTERED_PROPS}
     >
       <path
         vectorEffect="non-scaling-stroke"
