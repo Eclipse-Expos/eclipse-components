@@ -1,5 +1,6 @@
 import React, { FC, JSX, useState, TextareaHTMLAttributes } from "react";
 import { cn } from "@/lib/utils/cn";
+import { CustomTextAreaProps, TextAreaProps } from "./TextArea.types";
 
 /**
  * Ignored Text Area Props
@@ -14,16 +15,13 @@ const IGNORED_TEXTAREA_PROPS = [
 ];
 
 /**
- * Custom Text Area Props type definition
- */
-type TextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement>;
-
-/**
  * Eclipse Text Area Component
  *
  * @returns JSX.Element
  */
-const TextArea: FC<TextAreaProps> = (props): JSX.Element => {
+const TextArea: FC<CustomTextAreaProps & TextAreaProps> = (
+  props,
+): JSX.Element => {
   /**
    * Set to client side rendering
    */
@@ -35,7 +33,7 @@ const TextArea: FC<TextAreaProps> = (props): JSX.Element => {
    * This is used to keep track of the text area value.
    */
   const [value, setValue] = useState<string>(
-    props.value?.toString() || props.defaultValue?.toString() || "",
+    props.value || props.defaultValue || "",
   );
 
   /**

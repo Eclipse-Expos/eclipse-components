@@ -1,5 +1,6 @@
-import React, { useState, FC, JSX, InputHTMLAttributes } from "react";
+import React, { useState, FC, JSX } from "react";
 import { cn } from "@/lib/utils/cn";
+import { CustomInputProps, InputProps } from "./InputField.types";
 
 /**
  * Ignored Input Props
@@ -7,16 +8,6 @@ import { cn } from "@/lib/utils/cn";
  * These are the props that are ignored when passed to the input field.
  */
 const IGNORED_INPUT_PROPS = ["className", "placeholder", "value", "onChange"];
-
-/**
- * Custom Input Props type definition
- */
-type InputProps = InputHTMLAttributes<HTMLInputElement>;
-interface CustomInputProps {
-  value?: string;
-  className?: string;
-  defaultValue?: string;
-}
 
 /**
  * Eclipse Input Field Component

@@ -37,7 +37,7 @@ export default [
         plugins: [autoprefixer(), tailwindcss(tailwindConfig)],
       }),
 
-      typescript(),
+      typescript({ tsconfig: "./tsconfig.json" }),
       peerDepsExternal(),
 
       resolve(),

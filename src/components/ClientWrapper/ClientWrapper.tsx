@@ -2,18 +2,7 @@
  * Import React and the required types from React.
  */
 import { FC, ReactNode } from "react";
-
-/**
- * Client Wrapper Props
- */
-type ClientWrapperProps = {
-  /**
-   * The wrapper children
-   *
-   * This is used to pass children to the component.
-   */
-  children?: ReactNode;
-};
+import { ClientWrapperProps } from "./ClientWrapper.types";
 
 /**
  * Eclipse Client Wrapper Component

@@ -1,13 +1,6 @@
 import { cn } from "@/lib/utils/cn";
-import React, { FC, JSX, SVGAttributes } from "react";
-
-/**
- * Custom SVG Props
- */
-type SVGProps = SVGAttributes<HTMLOrSVGElement>;
-interface CustomSVGProps {
-  className?: string;
-}
+import React, { FC, JSX } from "react";
+import { CustomSVGProps, SVGProps } from "./EclipseLogoLong.types";
 
 /**
  * Ignore the following props

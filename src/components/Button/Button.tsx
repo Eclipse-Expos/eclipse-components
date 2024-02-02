@@ -1,13 +1,6 @@
 import { cn } from "@/lib/utils/cn";
-import React, { JSX, FC, ButtonHTMLAttributes, PropsWithChildren } from "react";
-
-/**
- * Custom Button Props type definition
- */
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
-type CustomButtonProps = {
-  className?: string;
-};
+import React, { JSX, FC, PropsWithChildren } from "react";
+import { CustomButtonProps, ButtonProps } from "./Button.types";
 
 /**
  * Ignored Button Props
