@@ -5,11 +5,8 @@ import { CustomInputProps, InputProps } from "./InputField.types";
 /**
  * Eclipse Input Field Component
  *
- * To convert the input to a date picker, use the following:
- * type="date"
- *
- * To convert the input to a file input, use the following:
- * type="file"
+ * DateInputField and FileInputField are also components that use InputField.
+ * Use them instead of this component if you need a date or file input field.
  *
  * @returns JSX.Element
  */
