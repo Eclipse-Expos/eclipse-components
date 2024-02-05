@@ -21,7 +21,7 @@ const TextField: FC<HTMLInputProps> = (props): JSX.Element => {
    * This is used to update the value in the state.
    */
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
+    setValue((_) => e.target.value);
 
     if (props.onChange) {
       props.onChange(e);

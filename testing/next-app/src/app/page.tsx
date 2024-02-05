@@ -5,7 +5,7 @@ import StarBackground from "@/components/StarBackground";
 import {
   Button,
   EclipseLogoLong,
-  InputField,
+  TextField,
   TextArea,
 } from "../../../../src/index";
 import { useState } from "react";
@@ -19,7 +19,7 @@ export default function Home() {
 
       <MainWrapper>
         <EclipseLogoLong />
-        <InputField
+        <TextArea
           value={value}
           placeholder="Test"
           onChange={(e) => {
