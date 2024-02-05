@@ -20,7 +20,6 @@ const RadioButton: FC<HTMLRadioButtonProps> = (props): JSX.Element => {
         className="hidden"
       />
       <label
-        {...props}
         htmlFor={props.id || id}
         className={cn(
           "flex flex-row items-center cursor-pointer text-white",

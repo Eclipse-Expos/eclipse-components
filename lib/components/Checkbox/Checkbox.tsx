@@ -32,7 +32,6 @@ const Checkbox: FC<HTMLCheckboxProps> = (props): JSX.Element => {
         }}
       />
       <label
-        {...props}
         htmlFor={props.id || id}
         className={cn(
           "flex flex-row gap-2 items-center cursor-pointer text-white",

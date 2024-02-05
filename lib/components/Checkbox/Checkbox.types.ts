@@ -1,14 +1,9 @@
-import {
-  InputHTMLAttributes,
-  DetailedHTMLProps,
-  LabelHTMLAttributes,
-} from "react";
+import { InputHTMLAttributes, DetailedHTMLProps } from "react";
 
 /**
  * HTML Radio Button Props type definition
  */
 export type HTMLCheckboxProps = DetailedHTMLProps<
-  LabelHTMLAttributes<HTMLLabelElement>,
-  HTMLLabelElement
-> &
-  DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
+  InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+>;
