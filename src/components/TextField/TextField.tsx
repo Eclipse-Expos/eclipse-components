@@ -1,6 +1,6 @@
 import React, { useState, FC, JSX, ChangeEvent } from "react";
 import { cn } from "@/lib/utils/cn";
-import { HTMLInputProps } from "./TextField.types";
+import { HTMLInputProps, TextFieldType } from "./TextField.types";
 
 /**
  * Eclipse Text Field Component
@@ -40,7 +40,7 @@ const TextField: FC<HTMLInputProps> = (props): JSX.Element => {
        */}
       <input
         {...props}
-        type="text"
+        type={props.type || "text"}
         className="peer w-full rounded-none border-2 border-primary bg-background p-3 font-light text-primary outline-none transition-all duration-200 ease-out placeholder:opacity-50 focus:border-primary disabled:opacity-50"
         placeholder="" // No placeholder. We use a span for this.
         value={value}

@@ -7,3 +7,5 @@ export type HTMLInputProps = DetailedHTMLProps<
   InputHTMLAttributes<HTMLInputElement>,
   HTMLInputElement
 >;
+
+export type TextFieldType = "text" | "password" | "email" | "number";
