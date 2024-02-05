@@ -13,4 +13,3 @@ export { default as DatePicker } from "./DatePicker";
 export { default as TextArea } from "./TextArea";
 export { default as EclipseLogoLong } from "./EclipseLogoLong";
 export { default as Button } from "./Button";
-export { default as ClientWrapper } from "./ClientWrapper";

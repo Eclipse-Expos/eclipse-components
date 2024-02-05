@@ -2,7 +2,12 @@
 
 import MainWrapper from "@/components/MainWrapper";
 import StarBackground from "@/components/StarBackground";
-import { Button, EclipseLogoLong, InputField } from "../../../../src/index";
+import {
+  Button,
+  EclipseLogoLong,
+  InputField,
+  TextArea,
+} from "../../../../src/index";
 import { useState } from "react";
 
 export default function Home() {
