@@ -53,14 +53,14 @@ const TextField: FC<HTMLInputProps> = (props): JSX.Element => {
        * We use a span so that we can move the text up and down depending on
        * whether the user has inputted anything.
        */}
-      <span
+      <label
         className={cn(
           "font-display pointer-events-none absolute left-0 top-2 z-20 mx-2 my-2 px-2 text-sm font-light tracking-wider text-primary transition-all duration-200 ease-in-out before:absolute before:left-0 before:top-1/2 before:z-[-1] before:h-2 before:w-full before:-translate-y-[1px] before:bg-background before:transition-colors before:duration-300 before:ease-out before:content-[''] peer-focus:-top-[1.2rem] peer-focus:left-1 peer-focus:mx-2 peer-focus:px-2 peer-focus:text-sm",
           value ? "left-1 -top-[1.2rem] mx-2 px-2 text-sm" : "", // Keep the label up if there's a value
         )}
       >
         {props.placeholder}
-      </span>
+      </label>
     </div>
   );
 };
