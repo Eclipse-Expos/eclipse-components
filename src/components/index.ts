@@ -13,3 +13,7 @@ export { default as DatePicker } from "./DatePicker";
 export { default as TextArea } from "./TextArea";
 export { default as EclipseLogoLong } from "./EclipseLogoLong";
 export { default as Button } from "./Button";
+
+export { default as StarBackground } from "./StarBackground";
+export { default as Notification } from "./Notification";
+export { default as LoadingSpinner } from "./LoadingSpinner";

@@ -5,6 +5,7 @@ import postcss from "rollup-plugin-postcss";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import tailwindcss from "tailwindcss";
+import scss from "rollup-plugin-scss";
 
 /**
  * ES Module imports
@@ -45,6 +46,7 @@ export default [
       commonjs(),
 
       terser(),
+      scss(),
 
       postcss({
         config: {
