@@ -1,26 +1,19 @@
-import React, { FC, JSX, useState, TextareaHTMLAttributes } from "react";
+import React, { ChangeEvent, FC, JSX, useState } from "react";
 import { cn } from "@/lib/utils/cn";
-import { CustomTextAreaProps, TextAreaProps } from "./TextArea.types";
+import { HTMLTextAreaProps } from "./TextArea.types";
 
 /**
  * Eclipse Text Area Component
  *
  * @returns JSX.Element
  */
-const TextArea: FC<CustomTextAreaProps & TextAreaProps> = (
-  props,
-): JSX.Element => {
-  /**
-   * Set to client side rendering
-   */
-  "use client";
-
+const TextArea: FC<HTMLTextAreaProps> = (props): JSX.Element => {
   /**
    * Store the value in a state
    *
    * This is used to keep track of the text area value.
    */
-  const [value, setValue] = useState<string>(
+  const [value, setValue] = useState<string | number | readonly string[]>(
     props.value || props.defaultValue || "",
   );
 
@@ -29,10 +22,12 @@ const TextArea: FC<CustomTextAreaProps & TextAreaProps> = (
    *
    * This is used to update the value in the state.
    */
-  const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(e.target.value);
+  const onChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setValue((_) => e.target.value);
 
-    props.onChange?.(e);
+    if (props.onChange) {
+      props.onChange(e);
+    }
   };
 
   /**
@@ -47,7 +42,7 @@ const TextArea: FC<CustomTextAreaProps & TextAreaProps> = (
        */}
       <textarea
         {...props}
-        className="peer w-full inline-block rounded-none border-2 border-primary bg-background p-3 font-sans font-light text-primary outline-none transition-all duration-200 ease-out placeholder:opacity-50 focus:border-primary disabled:opacity-50"
+        className="peer w-full inline-block rounded-none border-2 border-primary bg-background p-3 font-light text-primary outline-none transition-all duration-200 ease-out placeholder:opacity-50 focus:border-primary disabled:opacity-50"
         placeholder="" // No placeholder. We use a span for this.
         value={value}
         onChange={onChange}
@@ -62,7 +57,9 @@ const TextArea: FC<CustomTextAreaProps & TextAreaProps> = (
       <span
         className={cn(
           "font-display pointer-events-none absolute left-0 top-2 z-20 mx-2 my-2 px-2 text-sm font-light tracking-wider text-primary transition-all duration-200 ease-in-out before:absolute before:left-0 before:top-1/2 before:z-[-1] before:h-2 before:w-full before:-translate-y-[1px] before:bg-background before:transition-colors before:duration-300 before:ease-out before:content-[''] peer-focus:-top-[1.2rem] peer-focus:left-1 peer-focus:mx-2 peer-focus:px-2 peer-focus:text-sm",
-          value && "left-1 -top-[1.2rem] mx-2 px-2 text-sm", // Keep the label up if there's a value
+          value // Keep the label up if there's a value
+            ? "left-1 top-[-1.2rem] mx-2 px-2 text-sm"
+            : "",
         )}
       >
         {props.placeholder}

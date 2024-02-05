@@ -1,9 +1,6 @@
-import { SVGAttributes } from "react";
+import { SVGProps } from "react";
 
 /**
- * Custom SVG Props
+ * HTML SVG Props
  */
-export type SVGProps = SVGAttributes<HTMLOrSVGElement>;
-export interface CustomSVGProps {
-  className?: string;
-}
+export type HTMLSVGProps = SVGProps<SVGSVGElement>;

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "declarationMap": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
@@ -20,5 +21,13 @@
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
   },
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "example",
+    "testing",
+    "rollup.config.js",
+  ],
   "include": ["src"],
 }

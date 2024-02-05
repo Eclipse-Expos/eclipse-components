@@ -1,25 +1,17 @@
-import React, { useState, FC, JSX } from "react";
+import React, { useState, FC, JSX, ChangeEvent } from "react";
 import { cn } from "@/lib/utils/cn";
-import { CustomInputProps, InputProps } from "./InputField.types";
+import { HTMLInputProps } from "./TextField.types";
 
 /**
- * Eclipse Input Field Component
- *
- * DateInputField and FileInputField are also components that use InputField.
- * Use them instead of this component if you need a date or file input field.
+ * Eclipse Text Field Component
  *
  * @returns JSX.Element
  */
-const InputField: FC<CustomInputProps & InputProps> = (props): JSX.Element => {
+const TextField: FC<HTMLInputProps> = (props): JSX.Element => {
   /**
-   * Set the component to client side rendering
+   * States for the text field
    */
-  "use client";
-
-  /**
-   * States for the input field value
-   */
-  const [value, setValue] = useState<string>(
+  const [value, setValue] = useState<string | number | readonly string[]>(
     props.value || props.defaultValue || "",
   );
 
@@ -28,32 +20,35 @@ const InputField: FC<CustomInputProps & InputProps> = (props): JSX.Element => {
    *
    * This is used to update the value in the state.
    */
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setValue((_) => e.target.value);
 
-    props.onChange?.(e);
+    if (props.onChange) {
+      props.onChange(e);
+    }
   };
 
   /**
-   * Return the Input Field component JSX
+   * Return the Text Field component JSX
    *
    * Wrap the content in a relative div first.
    */
   return (
     <div className={cn("relative", props.className)}>
       {/**
-       * The actual input field.
+       * The actual text field
        */}
       <input
         {...props}
-        className="peer w-full rounded-none border-2 border-primary bg-background p-3 font-sans font-light text-primary outline-none transition-all duration-200 ease-out placeholder:opacity-50 focus:border-primary disabled:opacity-50"
+        type="text"
+        className="peer w-full rounded-none border-2 border-primary bg-background p-3 font-light text-primary outline-none transition-all duration-200 ease-out placeholder:opacity-50 focus:border-primary disabled:opacity-50"
         placeholder="" // No placeholder. We use a span for this.
         value={value}
-        onChange={onChange}
+        onChange={(e) => onChange(e)}
       />
 
       {/**
-       * This is the text content inside the input field.
+       * This is the text content inside the text field.
        *
        * We use a span so that we can move the text up and down depending on
        * whether the user has inputted anything.
@@ -71,6 +66,6 @@ const InputField: FC<CustomInputProps & InputProps> = (props): JSX.Element => {
 };
 
 /**
- * Export the input field by default.
+ * Export the text field by default.
  */
-export default InputField;
+export default TextField;

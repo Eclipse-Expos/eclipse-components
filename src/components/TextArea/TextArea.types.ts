@@ -1,11 +1,9 @@
-import { TextareaHTMLAttributes } from "react";
+import { DetailedHTMLProps, TextareaHTMLAttributes } from "react";
 
 /**
- * Custom Text Area Props type definition
+ * Text Area Props type definition
  */
-export type TextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement>;
-export interface CustomTextAreaProps {
-  value?: string;
-  className?: string;
-  defaultValue?: string;
-}
+export type HTMLTextAreaProps = DetailedHTMLProps<
+  TextareaHTMLAttributes<HTMLTextAreaElement>,
+  HTMLTextAreaElement
+>;

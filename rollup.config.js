@@ -5,6 +5,7 @@ import postcss from "rollup-plugin-postcss";
 import terser from "@rollup/plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import tailwindcss from "tailwindcss";
+
 /**
  * ES Module imports
  */
@@ -25,8 +26,26 @@ export default [
         format: "esm",
         sourcemap: true,
       },
+      {
+        file: packageJson.types,
+        format: "esm",
+        sourcemap: true,
+      },
     ],
+
     plugins: [
+      typescript({
+        tsconfig: "./tsconfig.json",
+        declaration: true,
+      }),
+
+      peerDepsExternal(),
+
+      resolve(),
+      commonjs(),
+
+      terser(),
+
       postcss({
         config: {
           path: "./postcss.config.cjs",
@@ -36,14 +55,6 @@ export default [
         extensions: [".css"],
         plugins: [autoprefixer(), tailwindcss(tailwindConfig)],
       }),
-
-      typescript({ tsconfig: "./tsconfig.json" }),
-      peerDepsExternal(),
-
-      resolve(),
-      commonjs(),
-
-      terser(),
     ],
   },
 ];

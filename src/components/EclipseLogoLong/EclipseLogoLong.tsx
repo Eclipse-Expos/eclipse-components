@@ -1,13 +1,13 @@
 import { cn } from "@/lib/utils/cn";
 import React, { FC, JSX } from "react";
-import { CustomSVGProps, SVGProps } from "./EclipseLogoLong.types";
+import { HTMLSVGProps } from "./EclipseLogoLong.types";
 
 /**
  * Eclipse Logo Long Component
  *
  * @returns JSX.Element
  */
-const EclipseLogoLong: FC<SVGProps & CustomSVGProps> = (props): JSX.Element => (
+const EclipseLogoLong: FC<HTMLSVGProps> = (props): JSX.Element => (
   <svg
     width={1080}
     height={250}

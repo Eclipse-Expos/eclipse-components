@@ -1,15 +1,14 @@
 import { cn } from "@/lib/utils/cn";
-import React, { JSX, FC, PropsWithChildren } from "react";
-import { CustomButtonProps, ButtonProps } from "./Button.types";
+import React, { JSX, FC } from "react";
+import { HTMLButtonProps } from "./Button.types";
+// import { ButtonBase, ButtonProps } from "@mui/material";
 
 /**
  * Eclipse Button Component
  *
  * @returns JSX.Element
  */
-const Button: FC<CustomButtonProps & PropsWithChildren<ButtonProps>> = (
-  props,
-): JSX.Element => (
+const Button: FC<HTMLButtonProps> = (props): JSX.Element => (
   <button
     {...props}
     className={cn(
