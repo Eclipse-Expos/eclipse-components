@@ -1,13 +1,3 @@
-import { ReactNode } from "react";
-
 /**
- * Client Wrapper Props
+ * Nothing to see here
  */
-export interface ClientWrapperProps {
-  /**
-   * The wrapper children
-   *
-   * This is used to pass children to the component.
-   */
-  children?: ReactNode;
-}

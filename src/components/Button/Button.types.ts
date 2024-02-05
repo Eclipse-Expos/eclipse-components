@@ -1,3 +1,6 @@
+import { ButtonHTMLAttributes } from "react";
+
 /**
- * Nothing to see here
+ * HTML Button Props type definition
  */
+export type HTMLButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;

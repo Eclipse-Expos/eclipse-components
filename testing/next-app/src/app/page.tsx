@@ -2,17 +2,25 @@
 
 import MainWrapper from "@/components/MainWrapper";
 import StarBackground from "@/components/StarBackground";
-// @ts-ignore
 import { Button, EclipseLogoLong, InputField } from "../../../../src/index";
+import { useState } from "react";
 
 export default function Home() {
+  const [value, setValue] = useState<string>("");
+
   return (
     <>
       <StarBackground />
 
       <MainWrapper>
         <EclipseLogoLong />
-        <InputField placeholder="Test" />
+        <InputField
+          value={value}
+          placeholder="Test"
+          onChange={(e) => {
+            setValue(e.target.value);
+          }}
+        />
         <Button>Subscribe</Button>
       </MainWrapper>
     </>

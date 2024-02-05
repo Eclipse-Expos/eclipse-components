@@ -6,14 +6,11 @@ import "../index.css";
 /**
  * Export the components
  */
-export { InputField } from "./InputField";
-export { DateInputField } from "./InputField";
-export { FileInputField } from "./InputField";
+export { default as InputField } from "./InputField";
+export { default as FileInput } from "./FileInput";
+export { default as DatePicker } from "./DatePicker";
 
 export { default as TextArea } from "./TextArea";
 export { default as EclipseLogoLong } from "./EclipseLogoLong";
 export { default as Button } from "./Button";
-export { default as Checkbox } from "./Checkbox";
 export { default as ClientWrapper } from "./ClientWrapper";
-
-export { default as Providers } from "./Providers";

@@ -1,14 +1,13 @@
 "use client";
 
-import { FC, ReactNode } from "react";
-import { ClientWrapperProps } from "./ClientWrapper.types";
+import { FC, PropsWithChildren, ReactNode } from "react";
 
 /**
  * Eclipse Client Wrapper Component
  *
  * @returns JSX.Element
  */
-const ClientWrapper: FC<ClientWrapperProps> = (props): ReactNode => {
+const ClientWrapper: FC<PropsWithChildren> = (props): ReactNode => {
   return props.children;
 };
 
