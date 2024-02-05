@@ -5,6 +5,7 @@ import {
   MainWrapper,
   EclipseLogoLong,
   RadioButton,
+  Checkbox,
 } from "../lib/components";
 import "./index.css";
 
@@ -18,6 +19,7 @@ export default function Home() {
 
         <RadioButton placeholder="Radio Button" />
         <RadioButton placeholder="Radio Button" />
+        <Checkbox placeholder="Checkbox" />
       </MainWrapper>
     </>
   );
