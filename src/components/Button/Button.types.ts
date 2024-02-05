@@ -1,9 +1,3 @@
-import { ButtonHTMLAttributes } from "react";
-
 /**
- * Custom Button Props type definition
+ * Nothing to see here
  */
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
-export interface CustomButtonProps {
-  className?: string;
-}

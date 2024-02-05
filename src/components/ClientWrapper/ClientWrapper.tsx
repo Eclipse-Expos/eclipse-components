@@ -1,6 +1,5 @@
-/**
- * Import React and the required types from React.
- */
+"use client";
+
 import { FC, ReactNode } from "react";
 import { ClientWrapperProps } from "./ClientWrapper.types";
 
@@ -10,14 +9,6 @@ import { ClientWrapperProps } from "./ClientWrapper.types";
  * @returns JSX.Element
  */
 const ClientWrapper: FC<ClientWrapperProps> = (props): ReactNode => {
-  /**
-   * Set to client
-   */
-  "use client";
-
-  /**
-   * Return the wrapper component JSX
-   */
   return props.children;
 };
 
