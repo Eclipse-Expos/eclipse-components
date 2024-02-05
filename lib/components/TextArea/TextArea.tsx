@@ -1,3 +1,5 @@
+"use client";
+
 import { ChangeEvent, FC, JSX, useState } from "react";
 import { cn } from "../../utils/cn";
 import { HTMLTextAreaProps } from "./TextArea.types";

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, FC, JSX, ChangeEvent } from "react";
 import { HTMLInputProps } from "./TextField.types";
 import { cn } from "../../utils/cn";

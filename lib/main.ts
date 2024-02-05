@@ -1,7 +1,7 @@
 /**
  * Import the styles for the components
  */
-import "./index.css";
+import "./index.scss";
 
 /**
  * Export all of the components
