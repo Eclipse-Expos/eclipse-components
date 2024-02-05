@@ -18,3 +18,5 @@ export { default as StarBackground } from "./StarBackground";
 export { default as Notification } from "./Notification";
 export { LoadingSpinnerCenter } from "./LoadingSpinner";
 export { LoadingSpinner } from "./LoadingSpinner";
+
+export { default as MainWrapper } from "./MainWrapper";
