@@ -16,4 +16,5 @@ export { default as Button } from "./Button";
 
 export { default as StarBackground } from "./StarBackground";
 export { default as Notification } from "./Notification";
-export { default as LoadingSpinner } from "./LoadingSpinner";
+export { LoadingSpinnerCenter } from "./LoadingSpinner";
+export { LoadingSpinner } from "./LoadingSpinner";
