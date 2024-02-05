@@ -1,22 +1,17 @@
 import React, { useState, FC, JSX, ChangeEvent } from "react";
 import { cn } from "@/lib/utils/cn";
-import { CustomInputProps, HTMLInputProps } from "./InputField.types";
+import { HTMLInputProps } from "./TextField.types";
 
 /**
- * Eclipse Input Field Component
- *
- * Use type="data" for a date picker
- * Use type="file" for file uploads
+ * Eclipse Text Field Component
  *
  * @returns JSX.Element
  */
-const InputField: FC<CustomInputProps & HTMLInputProps> = (
-  props,
-): JSX.Element => {
+const TextField: FC<HTMLInputProps> = (props): JSX.Element => {
   /**
-   * States for the input field value
+   * States for the text field
    */
-  const [value, setValue] = useState<string>(
+  const [value, setValue] = useState<string | number | readonly string[]>(
     props.value || props.defaultValue || "",
   );
 
@@ -28,29 +23,32 @@ const InputField: FC<CustomInputProps & HTMLInputProps> = (
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
 
-    props.onChange?.(e);
+    if (props.onChange) {
+      props.onChange(e);
+    }
   };
 
   /**
-   * Return the Input Field component JSX
+   * Return the Text Field component JSX
    *
    * Wrap the content in a relative div first.
    */
   return (
     <div className={cn("relative", props.className)}>
       {/**
-       * The actual input field.
+       * The actual text field
        */}
       <input
         {...props}
+        type="text"
         className="peer w-full rounded-none border-2 border-primary bg-background p-3 font-light text-primary outline-none transition-all duration-200 ease-out placeholder:opacity-50 focus:border-primary disabled:opacity-50"
         placeholder="" // No placeholder. We use a span for this.
         value={value}
-        onChange={onChange}
+        onChange={(e) => onChange(e)}
       />
 
       {/**
-       * This is the text content inside the input field.
+       * This is the text content inside the text field.
        *
        * We use a span so that we can move the text up and down depending on
        * whether the user has inputted anything.
@@ -68,6 +66,6 @@ const InputField: FC<CustomInputProps & HTMLInputProps> = (
 };
 
 /**
- * Export the input field by default.
+ * Export the text field by default.
  */
-export default InputField;
+export default TextField;

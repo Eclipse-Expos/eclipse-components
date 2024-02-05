@@ -1,6 +1,6 @@
-import { SVGAttributes } from "react";
+import { SVGProps } from "react";
 
 /**
  * HTML SVG Props
  */
-export type HTMLSVGProps = SVGAttributes<HTMLOrSVGElement>;
+export type HTMLSVGProps = SVGProps<SVGSVGElement>;

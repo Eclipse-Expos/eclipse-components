@@ -6,7 +6,7 @@ import "../index.css";
 /**
  * Export the components
  */
-export { default as InputField } from "./InputField";
+export { default as TextField } from "./TextField";
 export { default as FileInput } from "./FileInput";
 export { default as DatePicker } from "./DatePicker";
 
