@@ -1,13 +1,13 @@
 import { cn } from "../../utils/cn";
 import { FC, JSX } from "react";
-import { HTMLSVGProps } from "./EclipseLogoLong.types";
+import { HTMLSVGProps } from "./EclipseLogoTextOrbWhite.types";
 
 /**
- * Eclipse Logo Long Component
+ * Eclipse Logo Component
  *
  * @returns JSX.Element
  */
-const EclipseLogoLong: FC<HTMLSVGProps> = (props): JSX.Element => (
+const EclipseLogoTextOrbWhite: FC<HTMLSVGProps> = (props): JSX.Element => (
   <svg
     width={1080}
     height={250}
@@ -109,6 +109,6 @@ const EclipseLogoLong: FC<HTMLSVGProps> = (props): JSX.Element => (
 );
 
 /**
- * Export the Eclipse Logo Long component
+ * Export the Eclipse Logo component
  */
-export default EclipseLogoLong;
+export default EclipseLogoTextOrbWhite;

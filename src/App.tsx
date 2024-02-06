@@ -3,7 +3,7 @@
 import {
   StarBackground,
   MainWrapper,
-  EclipseLogoLong,
+  EclipseLogoTextOrbGlow,
   RadioButton,
   Checkbox,
   TextField,
@@ -16,7 +16,7 @@ export default function Home() {
       <StarBackground />
 
       <MainWrapper>
-        <EclipseLogoLong />
+        <EclipseLogoTextOrbGlow />
         <TextField placeholder="Text Field" />
 
         <RadioButton placeholder="Radio Button" />
