@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, FC, JSX, ChangeEvent } from "react";
+import { useState, FC, JSX, ChangeEvent, useEffect } from "react";
 import { HTMLInputProps } from "./TextField.types";
 import { cn } from "../../utils/cn";
 
@@ -16,6 +16,13 @@ const TextField: FC<HTMLInputProps> = (props): JSX.Element => {
   const [value, setValue] = useState<string | number | readonly string[]>(
     props.value || props.defaultValue || ""
   );
+
+  /**
+   * Update the value when the value prop changes
+   */
+  useEffect(() => {
+    setValue(props.value as string);
+  }, [props.value]);
 
   /**
    * Custom on change event handler
