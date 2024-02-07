@@ -3,7 +3,7 @@
 import { cn } from "../../utils/cn";
 import { JSX, FC, useState } from "react";
 import { HTMLCheckboxProps } from "./Checkbox.types";
-import { CheckSvg } from "..";
+import { CheckIcon } from "../Icons";
 
 /**
  * Eclipse Checkbox Component
@@ -40,7 +40,7 @@ const Checkbox: FC<HTMLCheckboxProps> = (props): JSX.Element => {
       >
         {checked && (
           <span className="w-5 h-5 flex flex-col justify-center items-center bg-white">
-            <CheckSvg className="w-5 h-5 fill-black" />
+            <CheckIcon className="w-5 h-5 fill-black" />
           </span>
         )}
         {!checked && <span className="w-5 h-5 border border-white"></span>}
