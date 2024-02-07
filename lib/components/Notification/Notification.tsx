@@ -12,6 +12,12 @@ import Snackbar, {
  *
  * @param props MUI SnackbarProps
  * @returns JSX.Element
+ *
+ * @example
+ * <Notification
+ *  open={true}
+ *  message="This is a notification"
+ * />
  */
 const Notification: FC<SnackbarProps> = (props): JSX.Element => {
   /**
