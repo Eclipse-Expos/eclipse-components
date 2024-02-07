@@ -1,13 +1,13 @@
-import { cn } from "../../utils/cn";
+import { cn } from "../../../utils/cn";
 import { JSX, FC } from "react";
-import { HTMLSvgProps } from "./CheckSvg.types";
+import { HTMLSvgProps } from "./CheckIcon.types";
 
 /**
- * Eclipse CheckSvg Component
+ * Eclipse Check Icon Component
  *
  * @returns JSX.Element
  */
-const CheckSvg: FC<HTMLSvgProps> = (props): JSX.Element => (
+const CheckIcon: FC<HTMLSvgProps> = (props): JSX.Element => (
   <svg
     {...props}
     xmlns="http://www.w3.org/2000/svg"
@@ -22,6 +22,6 @@ const CheckSvg: FC<HTMLSvgProps> = (props): JSX.Element => (
 );
 
 /**
- * Export the CheckSvg component
+ * Export the Check Icon component
  */
-export default CheckSvg;
+export default CheckIcon;

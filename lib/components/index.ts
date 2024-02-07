@@ -25,4 +25,3 @@ export { LoadingSpinner } from "./LoadingSpinner";
 export { default as MainWrapper } from "./MainWrapper";
 export { default as RadioButton } from "./RadioButton";
 export { default as Checkbox } from "./Checkbox";
-export { default as CheckSvg } from "./CheckSvg";
