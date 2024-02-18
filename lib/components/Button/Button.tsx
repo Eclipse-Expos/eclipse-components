@@ -6,7 +6,11 @@ import { HTMLButtonProps } from "./Button.types";
 /**
  * Eclipse Button Component
  *
+ * @param props - HTMLButtonProps
  * @returns JSX.Element
+ *
+ * @example
+ * <Button>Click Me!</Button>
  */
 const Button: FC<HTMLButtonProps> = (props): JSX.Element => (
   <button

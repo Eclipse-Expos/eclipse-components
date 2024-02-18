@@ -5,7 +5,11 @@ import { HTMLInputProps } from "./FileInput.types";
 /**
  * Eclipse File Input Component
  *
+ * @param props - HTMLInputProps
  * @returns JSX.Element
+ *
+ * @example
+ * <FileInput placeholder="Select a file" />
  */
 const FileInput: FC<HTMLInputProps> = (props): JSX.Element => (
   <input

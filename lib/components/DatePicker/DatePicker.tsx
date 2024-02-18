@@ -5,7 +5,11 @@ import { HTMLInputProps } from "./DatePicker.types";
 /**
  * Eclipse Date Picker Component
  *
+ * @param props - HTMLInputProps
  * @returns JSX.Element
+ *
+ * @example
+ * <DatePicker placeholder="Select a date" />
  */
 const DatePicker: FC<HTMLInputProps> = (props): JSX.Element => (
   <input

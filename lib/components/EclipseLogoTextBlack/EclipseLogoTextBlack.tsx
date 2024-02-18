@@ -7,7 +7,11 @@ import * as Logo from "./EclipseLogoTextBlack.svg?react";
 /**
  * Eclipse Logo Component
  *
+ * @param props - HTMLSVGProps
  * @returns JSX.Element
+ *
+ * @example
+ * <EclipseLogoTextBlack />
  */
 const EclipseLogoTextBlack: FC<HTMLSVGProps> = (props): JSX.Element => (
   <Logo.default width={1080} height={200} {...props} />

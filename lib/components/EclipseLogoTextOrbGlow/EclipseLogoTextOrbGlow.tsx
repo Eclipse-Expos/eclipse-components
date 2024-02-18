@@ -7,7 +7,11 @@ import * as Logo from "./EclipseLogoTextOrbGlow.svg?react";
 /**
  * Eclipse Logo Component
  *
+ * @param props - HTMLSVGProps
  * @returns JSX.Element
+ *
+ * @example
+ * <EclipseLogoTextOrbGlow />
  */
 const EclipseLogoTextOrbGlow: FC<HTMLSVGProps> = (props): JSX.Element => (
   <Logo.default width={1080} height={200} {...props} />

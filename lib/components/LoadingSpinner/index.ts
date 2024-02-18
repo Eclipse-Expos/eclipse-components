@@ -1,5 +1,5 @@
 /**
  * Export the Loading Spinner component
  */
-export { LoadingCenter as LoadingSpinnerCenter } from "./LoadingSpinner";
-export { LoadingRelative as LoadingSpinner } from "./LoadingSpinner";
+export { LoadingSpinnerCenter as LoadingSpinnerCenter } from "./LoadingSpinner";
+export { LoadingSpinner as LoadingSpinner } from "./LoadingSpinner";

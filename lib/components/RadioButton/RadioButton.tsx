@@ -5,7 +5,11 @@ import { HTMLRadioButtonProps } from "./RadioButton.types";
 /**
  * Eclipse Radio Button Component
  *
+ * @param props - HTMLRadioButtonProps
  * @returns JSX.Element
+ *
+ * @example
+ * <RadioButton placeholder="Radio Button" />
  */
 const RadioButton: FC<HTMLRadioButtonProps> = (props): JSX.Element => {
   const id = Math.random().toString(36);

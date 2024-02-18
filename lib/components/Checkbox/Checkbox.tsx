@@ -8,7 +8,11 @@ import { CheckIcon } from "../Icons";
 /**
  * Eclipse Checkbox Component
  *
+ * @param props - HTMLCheckboxProps
  * @returns JSX.Element
+ *
+ * @example
+ * <Checkbox placeholder="I agree to the terms and conditions" />
  */
 const Checkbox: FC<HTMLCheckboxProps> = (props): JSX.Element => {
   const id = Math.random().toString(36);

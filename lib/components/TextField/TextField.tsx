@@ -7,7 +7,11 @@ import { cn } from "../../utils/cn";
 /**
  * Eclipse Text Field Component
  *
+ * @param props - HTMLInputProps
  * @returns JSX.Element
+ *
+ * @example
+ * <TextField placeholder="Enter your name" />
  */
 const TextField: FC<HTMLInputProps> = (props): JSX.Element => {
   /**

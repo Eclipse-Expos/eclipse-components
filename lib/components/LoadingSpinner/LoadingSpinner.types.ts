@@ -1,3 +1,6 @@
+import { SVGProps } from "react";
+
 /**
- * Nothing to see here
+ * HTML Svg Props type definition
  */
+export type HTMLSvgProps = SVGProps<SVGSVGElement>;

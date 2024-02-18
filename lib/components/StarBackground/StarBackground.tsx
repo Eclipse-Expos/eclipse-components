@@ -2,6 +2,15 @@ import { FC, JSX } from "react";
 import stars from "./stars.module.scss";
 import { HTMLDivProps } from "./StarBackground.types";
 
+/**
+ * Eclipse StarBackground Component
+ *
+ * @param props - HTMLDivProps
+ * @returns JSX.Element
+ *
+ * @example
+ * <StarBackground />
+ */
 const StarBackground: FC<HTMLDivProps> = (props): JSX.Element => {
   return (
     <div {...props}>

@@ -7,7 +7,11 @@ import { HTMLTextAreaProps } from "./TextArea.types";
 /**
  * Eclipse Text Area Component
  *
+ * @param props - HTMLTextAreaProps
  * @returns JSX.Element
+ *
+ * @example
+ * <TextArea placeholder="Type something here" />
  */
 const TextArea: FC<HTMLTextAreaProps> = (props): JSX.Element => {
   /**

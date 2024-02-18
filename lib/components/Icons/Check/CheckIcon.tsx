@@ -5,7 +5,11 @@ import { HTMLSvgProps } from "./CheckIcon.types";
 /**
  * Eclipse Check Icon Component
  *
+ * @param props - HTMLSvgProps
  * @returns JSX.Element
+ *
+ * @example
+ * <CheckIcon />
  */
 const CheckIcon: FC<HTMLSvgProps> = (props): JSX.Element => (
   <svg

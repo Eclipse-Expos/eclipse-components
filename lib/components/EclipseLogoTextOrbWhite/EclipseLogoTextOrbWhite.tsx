@@ -5,7 +5,11 @@ import { HTMLSVGProps } from "./EclipseLogoTextOrbWhite.types";
 /**
  * Eclipse Logo Component
  *
+ * @param props - HTMLSVGProps
  * @returns JSX.Element
+ *
+ * @example
+ * <EclipseLogoTextOrbWhite />
  */
 const EclipseLogoTextOrbWhite: FC<HTMLSVGProps> = (props): JSX.Element => (
   <svg
