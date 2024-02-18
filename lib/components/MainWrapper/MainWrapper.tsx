@@ -3,11 +3,11 @@ import { JSX, FC, PropsWithChildren } from "react";
 import { HTMLElementProps } from "./MainWrapper.types";
 
 /**
- * Eclipse Button Component
+ * Eclipse MainWrapper Component
  *
  * @returns JSX.Element
  */
-const Button: FC<PropsWithChildren<HTMLElementProps>> = (
+const MainWrapper: FC<PropsWithChildren<HTMLElementProps>> = (
   props
 ): JSX.Element => (
   <main
@@ -22,6 +22,6 @@ const Button: FC<PropsWithChildren<HTMLElementProps>> = (
 );
 
 /**
- * Export the Button component
+ * Export the component
  */
-export default Button;
+export default MainWrapper;
