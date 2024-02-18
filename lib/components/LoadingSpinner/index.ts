@@ -1,5 +1,6 @@
 /**
  * Export the Loading Spinner component
  */
-export { LoadingSpinnerCenter as LoadingSpinnerCenter } from "./LoadingSpinner";
-export { LoadingSpinner as LoadingSpinner } from "./LoadingSpinner";
+export { default as LoadingSpinnerCenter } from "./LoadingSpinnerCenter";
+export { default as LoadingSpinner } from "./LoadingSpinner";
+export type { HTMLSVGProps } from "./LoadingSpinner.types";

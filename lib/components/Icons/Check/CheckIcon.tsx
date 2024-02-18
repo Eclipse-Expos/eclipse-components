@@ -1,6 +1,6 @@
 import { cn } from "../../../utils/cn";
 import { JSX, FC } from "react";
-import { HTMLSvgProps } from "./CheckIcon.types";
+import { HTMLSVGProps } from "./CheckIcon.types";
 
 /**
  * Eclipse Check Icon Component
@@ -11,7 +11,7 @@ import { HTMLSvgProps } from "./CheckIcon.types";
  * @example
  * <CheckIcon />
  */
-const CheckIcon: FC<HTMLSvgProps> = (props): JSX.Element => (
+const CheckIcon: FC<HTMLSVGProps> = (props): JSX.Element => (
   <svg
     {...props}
     xmlns="http://www.w3.org/2000/svg"

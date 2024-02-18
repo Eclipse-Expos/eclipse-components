@@ -1,20 +1,6 @@
 import { FC, JSX } from "react";
 import { cn } from "../../utils/cn";
-import { HTMLSvgProps } from "./LoadingSpinner.types";
-
-/**
- * Loading Component (Center)
- *
- * @returns JSX.Element
- *
- * @example
- * <LoadingSpinnerCenter />
- */
-export const LoadingSpinnerCenter: FC = (): JSX.Element => (
-  <section className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-    <LoadingSpinner />
-  </section>
-);
+import { HTMLSVGProps } from "./LoadingSpinner.types";
 
 /**
  * Loading Component (Relative)
@@ -25,7 +11,7 @@ export const LoadingSpinnerCenter: FC = (): JSX.Element => (
  * @example
  * <LoadingSpinner className="h-5 w-5" />
  */
-export const LoadingSpinner: FC<HTMLSvgProps> = (props): JSX.Element => (
+const LoadingSpinner: FC<HTMLSVGProps> = (props): JSX.Element => (
   <svg
     {...props}
     className={cn("z-10 h-20 w-20 animate-spin text-primary", props.className)}
@@ -41,3 +27,8 @@ export const LoadingSpinner: FC<HTMLSvgProps> = (props): JSX.Element => (
     ></path>
   </svg>
 );
+
+/**
+ * Export the Loading Spinner component
+ */
+export default LoadingSpinner;

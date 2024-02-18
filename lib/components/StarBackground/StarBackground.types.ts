@@ -1,6 +1,6 @@
 import { HTMLAttributes, DetailedHTMLProps } from "react";
 
-export type HTMLDivProps = DetailedHTMLProps<
+export type HTMLElementProps = DetailedHTMLProps<
   HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
 >;
