@@ -7,6 +7,7 @@ import {
   RadioButton,
   Checkbox,
   TextField,
+  EclipseLogoTextWhite,
 } from "../lib/components";
 import "./index.css";
 
@@ -17,6 +18,7 @@ export default function Home() {
 
       <MainWrapper>
         <EclipseLogoTextOrbGlow />
+        <EclipseLogoTextWhite />
         <TextField placeholder="Text Field" />
 
         <RadioButton placeholder="Radio Button" />
