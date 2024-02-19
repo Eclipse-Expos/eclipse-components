@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { FC, JSX } from "react";
+import { FC, JSX, Suspense } from "react";
 import { HTMLSVGProps } from "./EclipseLogoTextOrbGlow.types";
+import { LoadingSpinnerCenter } from "../LoadingSpinner";
 // @ts-ignore
 import * as Logo from "./EclipseLogoTextOrbGlow.svg?react";
 
@@ -14,7 +15,9 @@ import * as Logo from "./EclipseLogoTextOrbGlow.svg?react";
  * <EclipseLogoTextOrbGlow />
  */
 const EclipseLogoTextOrbGlow: FC<HTMLSVGProps> = (props): JSX.Element => (
-  <Logo.default width={1080} height={200} {...props} />
+  <Suspense fallback={<LoadingSpinnerCenter />}>
+    <Logo.default width={1080} height={200} {...props} />
+  </Suspense>
 );
 
 /**
