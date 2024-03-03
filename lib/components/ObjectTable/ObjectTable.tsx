@@ -18,7 +18,7 @@ function ObjectTable<T extends Record<string, any>>(
   return (
     <Table className={props.className}>
       <TableHead>
-        <TableRow>
+        <TableRow className="font-bold">
           {columnTitles.map((title, i) => (
             <TableCell key={i}>{title}</TableCell>
           ))}
