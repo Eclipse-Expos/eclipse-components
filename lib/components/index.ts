@@ -85,3 +85,6 @@ export type {
   HTMLTableHeadProps,
   HTMLTableRowProps,
 } from "./Table";
+
+export { ObjectTable } from "./ObjectTable";
+export type { ObjectTableProps } from "./ObjectTable";
