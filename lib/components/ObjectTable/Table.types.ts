@@ -10,6 +10,7 @@ type StringKeysOnly<T> = {
 
 export type ObjectTableProps<T extends Record<string, any>> = {
   className?: string;
+  rowClassName?: string;
   data: T[];
   columns: StringKeysOnly<T>[];
   computedColumns?: ((row: T) => ReactNode)[];

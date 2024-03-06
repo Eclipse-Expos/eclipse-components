@@ -27,12 +27,16 @@ function ObjectTable<T extends Record<string, any>>(
       <TableBody>
         {props.data.map((row, i) => {
           return (
-            <TableRow key={i}>
+            <TableRow key={i} className={props.rowClassName}>
               {props.columns.map((col, j) => (
-                <TableCell key={j}>{row[col]}</TableCell>
+                <TableCell className="relative" key={j}>
+                  {row[col]}
+                </TableCell>
               ))}
               {props.computedColumns?.map((col, j) => (
-                <TableCell key={j + props.columns.length}>{col(row)}</TableCell>
+                <TableCell className="relative" key={j + props.columns.length}>
+                  {col(row)}
+                </TableCell>
               ))}
             </TableRow>
           );

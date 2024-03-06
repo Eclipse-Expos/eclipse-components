@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { HTMLTableCellProps } from "./Table.types";
+import { cn } from "../../utils/cn";
 
 /**
  * Eclipse TableCell Component
@@ -11,7 +12,12 @@ import { HTMLTableCellProps } from "./Table.types";
  * <TableCell>Cell 1</TableCell>
  */
 const TableCell: FC<HTMLTableCellProps> = (props) => (
-  <td className="text-white flex text-sm flex-row gap-2 w-full">
+  <td
+    className={cn(
+      "text-white flex text-sm flex-row gap-2 w-full",
+      props.className
+    )}
+  >
     {props.children}
   </td>
 );
