@@ -22,10 +22,7 @@ import { HTMLTableBodyProps } from "./Table.types";
  */
 const TableBody: FC<HTMLTableBodyProps> = (props) => (
   <tbody
-    className={cn(
-      "bg-backgroun p-2 flex flex-col gap-2 w-full",
-      props.className
-    )}
+    className={cn("bg-background flex flex-col gap-2 w-full", props.className)}
   >
     {props.children}
   </tbody>

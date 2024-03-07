@@ -15,4 +15,5 @@ export type ObjectTableProps<T extends Record<string, any>> = {
   columns: StringKeysOnly<T>[];
   computedColumns?: ((row: T) => ReactNode)[];
   columnTitles?: string[];
+  onRowClick?: (row: T) => void;
 };

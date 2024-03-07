@@ -18,10 +18,7 @@ import { HTMLTableHeadProps } from "./Table.types";
  */
 const TableHead: FC<HTMLTableHeadProps> = (props) => (
   <thead
-    className={cn(
-      "bg-background p-2 flex flex-col gap-2 w-full",
-      props.className
-    )}
+    className={cn("bg-background flex flex-col gap-2 w-full", props.className)}
   >
     {props.children}
   </thead>

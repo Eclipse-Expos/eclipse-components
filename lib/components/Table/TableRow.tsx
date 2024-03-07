@@ -17,9 +17,10 @@ import { HTMLTableRowProps } from "./Table.types";
 const TableRow: FC<HTMLTableRowProps> = (props) => (
   <tr
     className={cn(
-      "bg-background border-b-2 border-b-white/10 text-background py-5 flex flex-row gap-2 w-full",
+      "bg-background p-2 border-b-2 border-b-white/10 text-background py-5 flex flex-row gap-2 w-full",
       props.className
     )}
+    onClick={props.onClick}
   >
     {props.children}
   </tr>

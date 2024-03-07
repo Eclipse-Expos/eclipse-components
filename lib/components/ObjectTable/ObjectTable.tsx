@@ -27,7 +27,13 @@ function ObjectTable<T extends Record<string, any>>(
       <TableBody>
         {props.data.map((row, i) => {
           return (
-            <TableRow key={i} className={props.rowClassName}>
+            <TableRow
+              key={i}
+              className={props.rowClassName}
+              onClick={() => {
+                props.onRowClick?.(row);
+              }}
+            >
               {props.columns.map((col, j) => (
                 <TableCell className="relative" key={j}>
                   {row[col]}

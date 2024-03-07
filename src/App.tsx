@@ -4,15 +4,19 @@ import {
   StarBackground,
   MainWrapper,
   EclipseLogoTextOrbGlow,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
+  ObjectTable,
 } from "../lib/components";
 import "./index.css";
 
 export default function Home() {
+  const objects = [
+    { id: 1, name: "Object 1", description: "Description 1" },
+    { id: 2, name: "Object 2", description: "Description 2" },
+    { id: 3, name: "Object 3", description: "Description 3" },
+    { id: 4, name: "Object 4", description: "Description 4" },
+    { id: 5, name: "Object 5", description: "Description 5" },
+  ];
+
   return (
     <>
       <StarBackground className="-z-10 fixed" />
@@ -20,35 +24,26 @@ export default function Home() {
       <MainWrapper>
         <EclipseLogoTextOrbGlow />
 
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Header 1</TableCell>
-              <TableCell>Header 2</TableCell>
-              <TableCell>Header 3</TableCell>
-            </TableRow>
-          </TableHead>
-
-          <TableBody>
-            <TableRow>
-              <TableCell>Row 1, Cell 1</TableCell>
-              <TableCell>Row 1, Cell 2</TableCell>
-              <TableCell>Row 1, Cell 3</TableCell>
-            </TableRow>
-
-            <TableRow>
-              <TableCell>Row 2, Cell 1</TableCell>
-              <TableCell>Row 2, Cell 2</TableCell>
-              <TableCell>Row 2, Cell 3</TableCell>
-            </TableRow>
-
-            <TableRow className="border-b-0">
-              <TableCell>Row 3, Cell 1</TableCell>
-              <TableCell>Row 3, Cell 2</TableCell>
-              <TableCell>Row 3, Cell 3</TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
+        <ObjectTable
+          data={objects}
+          columns={["name", "description"]}
+          columnTitles={["Name", "Description", "Object #"]}
+          rowClassName="hover:bg-gray-800 transition-colors duration-200 ease-out cursor-pointer"
+          computedColumns={[
+            (object) => {
+              return (
+                <>
+                  <span className="font-bold text-red-300">
+                    {object.name.split(" ")[1]}
+                  </span>
+                </>
+              );
+            },
+          ]}
+          onRowClick={(object) => {
+            console.log(object);
+          }}
+        />
       </MainWrapper>
     </>
   );
