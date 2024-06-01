@@ -87,7 +87,12 @@ export default function Home() {
             Show Notification
           </Button>
 
-          <DatePicker id="date" onSelect={setDate} />
+          <DatePicker
+            id="date"
+            onDateSelect={(date) => {
+              setDate(date as Date);
+            }}
+          />
           <Label htmlFor="date">
             {date
               ? `Selected date: ${date.toLocaleDateString()}`
