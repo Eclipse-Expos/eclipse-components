@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import {
   StarBackground,
   EclipseLogoTextOrbGlow,
@@ -20,6 +21,8 @@ import "./index.css";
 
 export default function Home() {
   const { toast } = useToast();
+
+  const [date, setDate] = React.useState<Date>();
 
   const objects = [
     { id: 1, name: "Object 1", description: "Description 1" },
@@ -84,7 +87,12 @@ export default function Home() {
             Show Notification
           </Button>
 
-          <DatePicker />
+          <DatePicker id="date" onSelect={setDate} />
+          <Label htmlFor="date">
+            {date
+              ? `Selected date: ${date.toLocaleDateString()}`
+              : "Select a date"}
+          </Label>
 
           <FileInput />
           <Input label="Email" />

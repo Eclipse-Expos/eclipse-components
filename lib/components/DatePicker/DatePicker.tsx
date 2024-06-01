@@ -8,9 +8,20 @@ import { cn } from "../../utils/cn";
 import { Button } from "../Button";
 import { Calendar } from "../Calendar/Calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "../Popover";
+import { DatePickerProps } from "./DatePicker.types";
 
-function DatePicker() {
+const DatePicker: React.FC<DatePickerProps> = (props) => {
+  const { onDateSelect: _onDateSelect, ...rest } = props;
+
   const [date, setDate] = React.useState<Date>();
+
+  const onDateSelect = (date: Date | undefined) => {
+    setDate(date);
+
+    if (_onDateSelect) {
+      _onDateSelect(date);
+    }
+  };
 
   return (
     <Popover>
@@ -28,14 +39,15 @@ function DatePicker() {
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0" align="start">
         <Calendar
+          {...rest}
           mode="single"
           selected={date}
-          onSelect={setDate}
+          onSelect={onDateSelect}
           initialFocus
         />
       </PopoverContent>
     </Popover>
   );
-}
+};
 
 export { DatePicker };
