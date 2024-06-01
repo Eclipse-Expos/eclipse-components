@@ -6,4 +6,8 @@ import "../../index.scss";
 /**
  * Export the components
  */
-export { default as CheckIcon } from "./Check";
+export { CheckIcon } from "./CheckIcon";
+export { EclipseLogoTextWhite } from "./EclipseLogoTextWhite";
+export { EclipseLogoTextBlack } from "./EclipseLogoTextBlack";
+export { EclipseLogoTextOrbGlow } from "./EclipseLogoTextOrbGlow";
+export { EclipseLogoTextOrbWhite } from "./EclipseLogoTextOrbWhite";

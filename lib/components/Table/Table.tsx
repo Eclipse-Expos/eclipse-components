@@ -1,11 +1,11 @@
 import { cn } from "../../utils/cn";
 import { JSX, FC } from "react";
-import { HTMLTableProps } from "./Table.types";
+import { TableProps } from "./Table.types";
 
 /**
  * Eclipse Table Component
  *
- * @param props - HTMLTableProps
+ * @param props - TableProps
  * @returns JSX.Element
  *
  * @example
@@ -28,11 +28,11 @@ import { HTMLTableProps } from "./Table.types";
  *  </TableBody>
  * </Table>
  */
-const Table: FC<HTMLTableProps> = (props): JSX.Element => (
+const Table: FC<TableProps> = (props): JSX.Element => (
   <table
     {...props}
     className={cn(
-      "table-cell bg-background border-2 border-white/10 text-white px-7 py-2 w-full",
+      "table-cell bg-background border-2 rounded-md border-white/10 text-white px-7 py-2 w-full",
       props.className
     )}
   >

@@ -1,9 +1,6 @@
-import { DetailedHTMLProps, InputHTMLAttributes } from "react";
+import { DateRange } from "react-day-picker";
+import { CalendarProps } from "../Calendar";
 
-/**
- * Date Picker type definition
- */
-export type HTMLInputProps = DetailedHTMLProps<
-  InputHTMLAttributes<HTMLInputElement>,
-  HTMLInputElement
->;
+export type DatePickerProps = CalendarProps & {
+  onDateSelect?: (date: Date[] | Date | DateRange | undefined) => void;
+};

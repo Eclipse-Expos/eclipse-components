@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { cn } from "../../utils/cn";
-import { HTMLTableBodyProps } from "./Table.types";
+import { TableBodyProps } from "./Table.types";
 
 /**
  * Eclipse TableBody Component
  *
- * @param props - HTMLTableProps
+ * @param props - TableProps
  * @returns JSX.Element
  *
  * @example
@@ -20,7 +20,7 @@ import { HTMLTableBodyProps } from "./Table.types";
  *  </TableRow>
  * </TableBody>
  */
-const TableBody: FC<HTMLTableBodyProps> = (props) => (
+const TableBody: FC<TableBodyProps> = (props) => (
   <tbody
     className={cn("bg-background flex flex-col gap-2 w-full", props.className)}
   >

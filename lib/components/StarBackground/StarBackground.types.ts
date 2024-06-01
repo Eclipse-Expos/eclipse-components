@@ -1,6 +1,6 @@
 import { HTMLAttributes, DetailedHTMLProps } from "react";
 
-export type HTMLElementProps = DetailedHTMLProps<
+export type StarBackgroundProps = DetailedHTMLProps<
   HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
 >;

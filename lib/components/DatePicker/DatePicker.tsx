@@ -1,28 +1,53 @@
-import { FC, JSX } from "react";
+"use client";
+
+import * as React from "react";
+import { CalendarIcon } from "@radix-ui/react-icons";
+import { format } from "date-fns";
+
 import { cn } from "../../utils/cn";
-import { HTMLInputProps } from "./DatePicker.types";
+import { Button } from "../Button";
+import { Calendar } from "../Calendar/Calendar";
+import { Popover, PopoverContent, PopoverTrigger } from "../Popover";
+import { DatePickerProps } from "./DatePicker.types";
 
-/**
- * Eclipse Date Picker Component
- *
- * @param props - HTMLInputProps
- * @returns JSX.Element
- *
- * @example
- * <DatePicker placeholder="Select a date" />
- */
-const DatePicker: FC<HTMLInputProps> = (props): JSX.Element => (
-  <input
-    {...props}
-    type="date"
-    className={cn(
-      "rounded-none border-2 border-primary bg-background p-3 font-light text-primary outline-none transition-all duration-200 ease-out placeholder:opacity-50 focus:border-primary disabled:opacity-50",
-      props.className
-    )}
-  />
-);
+const DatePicker: React.FC<DatePickerProps> = (props) => {
+  const { onDateSelect: _onDateSelect, ...rest } = props;
 
-/**
- * Export the Date Picker by default.
- */
-export default DatePicker;
+  const [date, setDate] = React.useState<Date>();
+
+  const onDateSelect = (date: Date | undefined) => {
+    setDate(date);
+
+    if (_onDateSelect) {
+      _onDateSelect(date);
+    }
+  };
+
+  return (
+    <Popover>
+      <PopoverTrigger asChild>
+        <Button
+          variant={"outline"}
+          className={cn(
+            "w-[240px] justify-start text-left font-normal",
+            !date ? "text-muted-foreground" : ""
+          )}
+        >
+          <CalendarIcon className="mr-2 h-4 w-4" />
+          {date ? format(date, "PPP") : <span>Select a date</span>}
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-auto p-0" align="start">
+        <Calendar
+          {...rest}
+          mode="single"
+          selected={date}
+          onSelect={onDateSelect}
+          initialFocus
+        />
+      </PopoverContent>
+    </Popover>
+  );
+};
+
+export { DatePicker };

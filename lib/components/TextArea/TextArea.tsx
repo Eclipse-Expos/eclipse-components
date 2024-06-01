@@ -2,18 +2,18 @@
 
 import { ChangeEvent, FC, JSX, useState } from "react";
 import { cn } from "../../utils/cn";
-import { HTMLTextAreaProps } from "./TextArea.types";
+import { TextareaProps } from "./Textarea.types";
 
 /**
  * Eclipse Text Area Component
  *
- * @param props - HTMLTextAreaProps
+ * @param props - HTMLTextareaProps
  * @returns JSX.Element
  *
  * @example
- * <TextArea placeholder="Type something here" />
+ * <Textarea placeholder="Type something here" />
  */
-const TextArea: FC<HTMLTextAreaProps> = (props): JSX.Element => {
+const Textarea: FC<TextareaProps> = (props): JSX.Element => {
   /**
    * Store the value in a state
    *
@@ -48,7 +48,7 @@ const TextArea: FC<HTMLTextAreaProps> = (props): JSX.Element => {
        */}
       <textarea
         {...props}
-        className="peer w-full inline-block rounded-none border-2 border-primary bg-background p-3 font-light text-primary outline-none transition-all duration-200 ease-out placeholder:opacity-50 focus:border-primary disabled:opacity-50"
+        className="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
         placeholder="" // No placeholder. We use a span for this.
         value={value}
         onChange={onChange}
@@ -77,4 +77,4 @@ const TextArea: FC<HTMLTextAreaProps> = (props): JSX.Element => {
 /**
  * Export the text area by default.
  */
-export default TextArea;
+export default Textarea;

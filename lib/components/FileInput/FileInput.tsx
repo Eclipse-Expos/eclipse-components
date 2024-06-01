@@ -1,6 +1,5 @@
-import { FC, JSX } from "react";
-import { cn } from "../../utils/cn";
-import { HTMLInputProps } from "./FileInput.types";
+import * as React from "react";
+import { Input } from "../Input";
 
 /**
  * Eclipse File Input Component
@@ -11,18 +10,11 @@ import { HTMLInputProps } from "./FileInput.types";
  * @example
  * <FileInput placeholder="Select a file" />
  */
-const FileInput: FC<HTMLInputProps> = (props): JSX.Element => (
-  <input
-    {...props}
-    type="file"
-    className={cn(
-      "rounded-none border-2 border-primary bg-background p-3 font-light text-primary outline-none transition-all duration-200 ease-out placeholder:opacity-50 focus:border-primary disabled:opacity-50",
-      props.className
-    )}
-  />
-);
+const FileInput = (
+  props: React.InputHTMLAttributes<HTMLInputElement>
+): JSX.Element => <Input {...props} type="file" />;
 
 /**
  * Export the file input by default.
  */
-export default FileInput;
+export { FileInput };

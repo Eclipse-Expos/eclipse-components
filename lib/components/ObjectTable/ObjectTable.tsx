@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { ObjectTableProps } from "./Table.types";
+import { ObjectTableProps } from "./ObjectTable.types";
 import { Table, TableBody, TableCell, TableHead, TableRow } from "../Table";
 
 function ObjectTable<T extends Record<string, any>>(

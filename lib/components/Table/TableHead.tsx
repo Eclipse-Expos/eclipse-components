@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { cn } from "../../utils/cn";
-import { HTMLTableHeadProps } from "./Table.types";
+import { TableHeadProps } from "./Table.types";
 
 /**
  * Eclipse TableHead Component
  *
- * @param props - HTMLTableProps
+ * @param props - TableProps
  * @returns JSX.Element
  *
  * @example
@@ -16,7 +16,7 @@ import { HTMLTableHeadProps } from "./Table.types";
  *  </TableRow>
  * </TableHead>
  */
-const TableHead: FC<HTMLTableHeadProps> = (props) => (
+const TableHead: FC<TableHeadProps> = (props) => (
   <thead
     className={cn("bg-background flex flex-col gap-2 w-full", props.className)}
   >

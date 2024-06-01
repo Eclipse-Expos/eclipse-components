@@ -1,26 +1,26 @@
 import { DetailedHTMLProps, TableHTMLAttributes } from "react";
 
-export type HTMLTableProps = DetailedHTMLProps<
+export type TableProps = DetailedHTMLProps<
   TableHTMLAttributes<HTMLTableElement>,
   HTMLTableElement
 >;
 
-export type HTMLTableHeadProps = DetailedHTMLProps<
+export type TableHeadProps = DetailedHTMLProps<
   TableHTMLAttributes<HTMLTableSectionElement>,
   HTMLTableSectionElement
 >;
 
-export type HTMLTableBodyProps = DetailedHTMLProps<
+export type TableBodyProps = DetailedHTMLProps<
   TableHTMLAttributes<HTMLTableSectionElement>,
   HTMLTableSectionElement
 >;
 
-export type HTMLTableRowProps = DetailedHTMLProps<
+export type TableRowProps = DetailedHTMLProps<
   TableHTMLAttributes<HTMLTableRowElement>,
   HTMLTableRowElement
 >;
 
-export type HTMLTableCellProps = DetailedHTMLProps<
+export type TableCellProps = DetailedHTMLProps<
   TableHTMLAttributes<HTMLTableCellElement>,
   HTMLTableCellElement
 >;
