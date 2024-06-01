@@ -1,5 +1,3 @@
-/**
- * Export the Button Component
- */
-export { default } from "./Button";
-export type { HTMLButtonProps } from "./Button.types";
+export { Button } from "./Button";
+export { buttonVariants } from "./Button.variants";
+// export * from "./Button.types";
