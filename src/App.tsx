@@ -16,6 +16,7 @@ import {
   ObjectTable,
   Checkbox,
   Label,
+  TextArea,
 } from "../lib/components";
 import "./index.css";
 
@@ -124,6 +125,8 @@ export default function Home() {
               console.log(object);
             }}
           />
+
+          <TextArea label="test" />
         </main>
       </ThemeProvider>
 
