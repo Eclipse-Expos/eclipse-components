@@ -42,8 +42,8 @@ export { ThemeProvider } from "./ThemeProvider";
 /**
  * Text Area Component
  */
-export { default as Textarea } from "./Textarea";
-export type { TextareaProps } from "./Textarea";
+export { default as TextArea } from "./TextArea";
+export type { TextAreaProps } from "./TextArea";
 
 /**
  * Star Background Component
