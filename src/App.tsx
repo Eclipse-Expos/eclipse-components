@@ -101,7 +101,7 @@ export default function Home() {
           </Label>
 
           <FileInput />
-          <Input label="Email" />
+          <Input label="Email" placeholder="test" />
 
           <Button variant={"outline"}>Register for launch</Button>
 

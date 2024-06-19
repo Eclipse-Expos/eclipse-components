@@ -23,7 +23,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       props.value || props.defaultValue || ""
     );
 
-    const [active, setActive] = useState<boolean>(false);
+    const [active, setActive] = useState<boolean>(
+      !!props.placeholder || !!value
+    );
 
     /**
      * Update the value when the value prop changes
@@ -64,7 +66,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
      * This is used to update the active state.
      */
     const onBlur = (e: FocusEvent<HTMLInputElement, Element>) => {
-      setActive(!!value);
+      setActive(!!props.placeholder || !!value);
 
       if (props.onBlur) {
         props.onBlur(e);
