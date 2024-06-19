@@ -23,7 +23,9 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
       props.value || props.defaultValue || ""
     );
 
-    const [active, setActive] = useState<boolean>(false);
+    const [active, setActive] = useState<boolean>(
+      !!props.placeholder || !!value
+    );
 
     /**
      * Update the value when the value prop changes
@@ -64,7 +66,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
      * This is used to update the active state.
      */
     const onBlur = (e: FocusEvent<HTMLTextAreaElement, Element>) => {
-      setActive(!!value);
+      setActive(!!props.placeholder || !!value);
 
       if (props.onBlur) {
         props.onBlur(e);
