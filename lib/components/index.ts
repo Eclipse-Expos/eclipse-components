@@ -48,7 +48,7 @@ export type { TextAreaProps } from "./TextArea";
 /**
  * Star Background Component
  */
-export { default as StarBackground } from "./StarBackground";
+export { StarBackground } from "./StarBackground";
 export type { StarBackgroundProps } from "./StarBackground";
 
 /**
