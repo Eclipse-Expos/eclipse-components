@@ -20,4 +20,7 @@ const StarBackground: FC<StarBackgroundProps> = (props): JSX.Element => {
   );
 };
 
-export default StarBackground;
+/**
+ * Export the component
+ */
+export { StarBackground };
